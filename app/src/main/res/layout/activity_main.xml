@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Stats and Controls Container (Top-Left) -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <!-- Stats -->
+        <TextView
+            android:id="@+id/statsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+        <!-- Gravity Range Slider -->
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gravity Range"
+                android:textColor="@android:color/white"
+                android:fontFamily="monospace"
+                android:textSize="12sp" />
+
+            <SeekBar
+                android:id="@+id/gravityRangeSlider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:progress="50"
+                android:progressTint="@android:color/white"
+                android:thumbTint="@android:color/white" />
+        </LinearLayout>
+
+        <!-- Gravity Strength Slider -->
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gravity Strength"
+                android:textColor="@android:color/white"
+                android:fontFamily="monospace"
+                android:textSize="12sp" />
+
+            <SeekBar
+                android:id="@+id/gravityStrengthSlider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:progress="50"
+                android:progressTint="@android:color/white"
+                android:thumbTint="@android:color/white" />
+        </LinearLayout>
+
+        <!-- Reflective Planet Toggle -->
+        <CheckBox
+            android:id="@+id/reflectivePlanetToggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Enable Planet"
+            android:textColor="@android:color/white"
+            android:fontFamily="monospace"
+            android:textSize="12sp"
+            android:buttonTint="@android:color/white" />
+    </LinearLayout>
+
+    <!-- Controls (Bottom-Center) -->
+    <LinearLayout
+        android:id="@+id/controls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:spacing="10dp">
+
+        <Button
+            android:id="@+id/color0"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/circle_button"
+            android:backgroundTint="#ffc72e" />
+
+        <Button
+            android:id="@+id/color1"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/circle_button"
+            android:backgroundTint="#00ffff" />
+
+        <Button
+            android:id="@+id/color2"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/circle_button"
+            android:backgroundTint="#ffffff" />
+
+        <Button
+            android:id="@+id/resetBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+            android:fontFamily="monospace"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp"
+            android:text="Reset"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</FrameLayout> 
