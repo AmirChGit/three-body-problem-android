@@ -103,9 +103,6 @@ Smooth color transitions are achieved through linear interpolation in RGB space.
 3. Sync Gradle files
 4. Build and run on your device or emulator
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgments
 
